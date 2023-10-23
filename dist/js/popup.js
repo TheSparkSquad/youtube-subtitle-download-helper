@@ -4626,8 +4626,8 @@
              c().json2csvAsync(t, {
                 excelBOM: !0
              }).then((r => {
-                //chrome.downloads.download({ //CMudd this line sets the download location
-                chrome.scripting.download({//CMudd chrome.downloads.download is deprecated use chrome.scripting.download instead
+                chrome.downloads.download({ //CMudd this line sets the download location
+                //chrome.scripting.download({//CMudd chrome.downloads.download is deprecated use chrome.scripting.download instead
                    url: URL.createObjectURL(new Blob([r], {
                       type: "text/csv" //CMudd this line determines the file type.
                    })),
