@@ -4624,7 +4624,8 @@
                    url: URL.createObjectURL(new Blob([r], {
                       type: "text/csv" //CMudd this line determines the file type.
                    })),
-                   filename: "C:\Users\Public\Documents"+e + ".csv", //e is the folder location and the file name? how is e populated.
+                   filename: +e + ".csv",
+                   //filename: "C:\Users\Public\Documents"+e + ".csv", //e is the folder location and the file name? how is e populated.
                    conflictAction: 'uniquify',
                 })
              })).catch((r => {
